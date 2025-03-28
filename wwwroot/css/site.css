@@ -1,0 +1,99 @@
+/* Keep font as Times New Roman */
+body {
+    background: url('/images/craft-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Centered login container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Stylish login box */
+.login-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+/* Header styling */
+.login-title {
+    font-size: 28px;
+    color: #d35400;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.login-subtitle {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Input styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Button styling */
+.btn-block {
+    width: 100%;
+    background-color: #d35400;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+}
+
+    .btn-block:hover {
+        background-color: #e67e22;
+    }
+
+/* Error message */
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.craft-card {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f1e7;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    box-shadow: 2px 2px 8px #ccc;
+}
+
+    .craft-card:hover {
+        background-color: #f0c987;
+        color: #fff;
+    }
+
+.material-item {
+    margin-bottom: 20px;
+}
+
+    .material-item img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+    }
