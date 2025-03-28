@@ -1,0 +1,168 @@
+﻿@model List<CraftModel1>
+
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .craft-card {
+        background-color: #f0e6d6;
+        padding: 20px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px #999;
+        transition: background-color 0.3s;
+    }
+
+        .craft-card:hover {
+            background-color: #d8c6aa;
+        }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .upload-section {
+        width: 40%;
+        margin: 30px auto;
+        padding: 20px;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .upload-section:hover {
+            transform: scale(1.05);
+        }
+
+        .upload-section h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control, .file-input {
+        width: 90%;
+        padding: 10px;
+        font-size: 14px;
+        border: 2px solid #fff;
+        border-radius: 8px;
+        outline: none;
+        background: rgba(255, 255, 255, 0.8);
+        transition: all 0.3s ease;
+    }
+
+        .form-control:focus, .file-input:focus {
+            border-color: #ff758c;
+            box-shadow: 0px 0px 10px rgba(255, 117, 140, 0.5);
+        }
+
+    .upload-btn {
+        background: #ff758c;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out, transform 0.2s;
+    }
+
+        .upload-btn:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+        }
+
+    #successMessage {
+        margin-top: 15px;
+        font-size: 14px;
+        font-weight: bold;
+        color: green;
+        animation: fadeOut 3s ease-in-out forwards;
+    }
+
+    #searchBar {
+        border: 2px solid black; /* Sets border color to black */
+        border-radius: 8px; /* Optional: Gives smooth rounded corners */
+        padding: 10px;
+        font-size: 16px;
+        outline: none; /* Removes the default blue outline */
+    }
+
+
+
+
+
+</style>
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Crafting Dashboard</h2>
+
+    <!-- Search Bar -->
+    <div class="input-group mb-4">
+        <input type="text" id="searchBar" class="form-control" placeholder="Search Crafts..." onkeyup="filterCrafts()" />
+    </div>
+
+    <!-- Craft Categories -->
+    <div class="row" id="craftCategories">
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var craft in Model)
+            {
+                <div class="col-md-4 mb-3 craft-card-container">
+                    <a href="@Url.Action("CraftDetails", "Home", new { craftName = craft.CraftName })">
+                        <div class="card craft-card">@craft.CraftName</div>
+                    </a>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No crafts available.</p>
+        }
+    </div>
+</div>
+
+<script>
+    function filterCrafts() {
+        const filter = document.getElementById('searchBar').value.toLowerCase();
+        const cards = document.querySelectorAll('.craft-card-container');
+        cards.forEach(card => {
+            card.style.display = card.innerText.toLowerCase().includes(filter) ? "block" : "none";
+        });
+    }
+</script>
+
+
+<div class="upload-section">
+    <h3>If you have new craft ideas, please upload them here:</h3>
+
+    <form id="uploadForm" action="/Home/UploadIdea" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="text" name="craftName" placeholder="Enter Craft Name" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <input type="file" name="craftIdeaFile" class="file-input" required />
+        </div>
+        <button type="submit" class="upload-btn">Upload Idea</button>
+    </form>
+
+    @if (TempData["Message"] != null)
+    {
+        <div id="successMessage">@TempData["Message"]</div>
+    }
+</div>

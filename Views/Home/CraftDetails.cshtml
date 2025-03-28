@@ -1,0 +1,462 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewBag.Title = "Craft Details";
+    string craft = ViewBag.CraftName as string;
+    int price = 100;
+
+    if (craft == "Paper Craft")
+    {
+        price = 120;
+    }
+    else if (craft == "Bottle Craft")
+    {
+        price = 150;
+    }
+    else if (craft == "Fiber Craft")
+    {
+        price = 180;
+    }
+    else if (craft == "Clay")
+    {
+        price = 200;
+    }
+    else if (craft == "Basket Weaving")
+    {
+        price = 220;
+    }
+    else if (craft == "Teddy Bear Making")
+    {
+        price = 250;
+    }
+}
+
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .material-section {
+        margin: 20px;
+    }
+
+        .material-section img {
+            width: 250px;
+            height: 200px;
+            margin-right: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px #888;
+        }
+
+    .buy-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+        .buy-btn:hover {
+            background-color: #45a049;
+        }
+
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup {
+        background: #fff;
+        width: 50%;
+        padding: 30px;
+        border-radius: 15px;
+        position: relative;
+    }
+
+        .popup h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .popup label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .popup input, .popup textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .popup button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #ff4d4d;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 18px;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+    }
+
+    .order-confirm {
+        margin-top: 15px;
+        font-weight: bold;
+        color: green;
+        text-align: center;
+    }
+
+    .error {
+        color: red;
+        font-size: 14px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+</style>
+
+<script>
+    function openPopup() {
+      document.getElementById('orderPopup').style.display = 'flex';
+    }
+
+    function closePopup() {
+      clearForm();
+      document.getElementById('orderPopup').style.display = 'none';
+    }
+
+     function clearForm() {
+            document.getElementById('custName').value = '';
+            document.getElementById('custMobile').value = '';
+            document.getElementById('custAddress').value = '';
+            document.getElementById('qrSection').style.display = 'none';
+            document.getElementById('orderStatus').innerHTML = '';
+            document.getElementById('errorMsg').innerHTML = '';
+        }
+
+                function validateForm() {
+            let name = document.getElementById('custName').value.trim();
+            let mobile = document.getElementById('custMobile').value.trim();
+            let address = document.getElementById('custAddress').value.trim();
+            let error = "";
+
+            if (name === "" || mobile === "" || address === "") {
+                error = "All fields are required!";
+            } else if (!/^\d{10}$/.test(mobile)) {
+                error = "Mobile number must be 10 digits!";
+            }
+
+            document.getElementById('errorMsg').innerText = error;
+            return error === "";
+        }
+
+
+        function paymentStatus(status) {
+            if (status === 'Paid') {
+                document.getElementById('orderStatus').innerText = 'Order Confirmed (Payment Successful)';
+                sendWhatsApp('Paid');
+            } else {
+                document.getElementById('orderStatus').innerText = 'Order Confirmed. Our admin will contact you.';
+                sendWhatsApp('Not Paid');
+            }
+            setTimeout(closePopup, 3000);
+        }
+
+        function sendWhatsApp(paymentMode) {
+            let name = document.getElementById('custName').value.trim();
+            let mobile = document.getElementById('custMobile').value.trim();
+            let address = document.getElementById('custAddress').value.trim();
+            let amount = document.getElementById('craftPrice').value;
+
+            let message = `Order Details:%0AName: ${name}%0AMobile: ${mobile}%0AAddress: ${address}%0APayment Mode: ${paymentMode}%0AAmount: : ${amount}`;
+
+            // WhatsApp API Call (uncomment if you want redirection)
+            window.open('https://wa.me/9361024739?text=' + message, '_blank');
+        }
+
+
+    function validateMobile() {
+        let mobileInput = document.getElementById("custMobile");
+        let errorDiv = document.getElementById("errorMsg");
+
+        if (!/^\d{10}$/.test(mobileInput.value)) {
+            errorDiv.style.display = "block";
+            errorDiv.innerText = "Please enter a valid 10-digit mobile number.";
+        } else {
+            errorDiv.style.display = "none";
+        }
+    }
+
+    function placeOrder(paymentType) {
+        let name = document.getElementById("custName").value.trim();
+        let mobile = document.getElementById("custMobile").value.trim();
+        let address = document.getElementById("custAddress").value.trim();
+
+        if (name === "" || mobile === "" || address === "") {
+            document.getElementById("errorMsg").innerText = "All fields are required.";
+            document.getElementById("errorMsg").style.display = "block";
+            return;
+        }
+
+        let orderData = {
+            Name: name,
+            Mobile: mobile,
+            Address: address,
+            PaymentType: paymentType,
+            CraftName: "@ViewBag.CraftName"
+        };
+
+        fetch('/Home/PlaceOrder', {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(orderData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Order placed successfully!");
+                closePopup();
+            } else {
+                alert("Failed to place order.");
+            }
+        })
+        .catch(error => console.error("Error:", error));
+    }
+
+    function cashOnDelivery() {
+        placeOrder("Cash on Delivery");
+    }
+
+    function onlinePayment() {
+        document.getElementById("qrSection").style.display = "block";
+    }
+
+
+</script>
+
+
+<div class="material-section">
+    <h2 style="text-align: center;">@craft - Amount ₹<span id="displayPrice">@price</span></h2>
+    <input type="hidden" id="craftPrice" value="@price" />
+
+    @if (craft == "Paper Craft")
+    {
+        <h4 style="text-align: center;">Materials Needed:</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="width: 30%; text-align: center;">
+                <p>Origami Papers</p>
+                <img src="/images/origamiPaper.jpg" alt="Origami Papers" style="width: 100%; height: auto;" />
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <p>Scissors</p>
+                <img src="/images/scissor.jpg" alt="Scissors" style="width: 100%; height: auto;" />
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <p>Glue Stick</p>
+                <img src="/images/glue.jpg" alt="Glue Stick" style="width: 100%; height: auto;" />
+            </div>
+        </div>
+
+        <h4 style="text-align: center;">Tutorial Video:</h4>
+        <div style="text-align: center;">
+            <a href="https://youtu.be/sCf7Q4zGP6g?si=KeHEkZtff0CW8ivg" target="_blank">
+                <img src="/images/paper.jpg" alt="Watch Tutorial" style="width: 40%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+            </a>
+        </div>
+
+    }
+
+    @if (craft == "Bottle Craft")
+    {
+        <h4 style="text-align: center;">Materials Needed:</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="width: 30%; text-align: center;">
+                <p>Glass Bottle</p>
+                <img src="/images/bottleEmp.jpg" alt="Glass Bottle" style="width: 100%; height: auto;" />
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <p>Paints</p>
+                <img src="/images/paint.jpg" alt="Paints" style="width: 100%; height: auto;" />
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <p>Brushes</p>
+                <img src="/images/brush.jpg" alt="Brushes" style="width: 100%; height: auto;" />
+            </div>
+        </div>
+
+        <h4 style="text-align: center;">Tutorial Video:</h4>
+        <div style="text-align: center;">
+            <a href="https://youtu.be/wsD1mrHnCmw?si=I3BUflAUgBtVxfLz" target="_blank">
+                <img src="/images/bottle.jpg" alt="Watch Tutorial" style="width: 40%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+            </a>
+        </div>
+    }
+
+    @if (craft == "Fiber Craft")
+    {
+        <h4 style="text-align: center;">Materials Needed:</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="width: 30%; text-align: center;">
+                <p>Yarn/Fiber</p>
+                <img src="/images/yarnFibre.jpg" alt="Yarn/Fiber" style="width: 100%; height: auto;" />
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <p>Scissors</p>
+                <img src="/images/scissor.jpg" alt="Scissors" style="width: 100%; height: auto;" />
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <p>Glue</p>
+                <img src="/images/glue.jpg" alt="Glue" style="width: 100%; height: auto;" />
+            </div>
+        </div>
+
+        <h4 style="text-align: center;">Tutorial Video:</h4>
+        <div style="text-align: center;">
+            <a href="https://youtu.be/1iwBMBseouM?si=ex92bZIsCuzHkSNf" target="_blank">
+                <img src="/images/fibre.jpg" alt="Watch Tutorial" style="width: 40%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+            </a>
+        </div>
+    }
+
+    @if (craft == "Clay")
+    {
+        <h4 style="text-align: center;">Materials Needed:</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="width: 30%; text-align: center;">
+                <p>Modeling Clay</p>
+                <img src="/images/Polymerclay.jpg" alt="Modeling Clay" style="width: 100%; height: auto;" />
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <p>Tools Set</p>
+                <img src="/images/clayTools.jpg" alt="Tools Set" style="width: 100%; height: auto;" />
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <p>Acrylic Paints</p>
+                <img src="/images/paint.jpg" alt="Acrylic Paints" style="width: 100%; height: auto;" />
+            </div>
+        </div>
+
+        <h4 style="text-align: center;">Tutorial Video:</h4>
+        <div style="text-align: center;">
+            <a href="https://youtu.be/noiUT2m87AI?si=u7VDJv6YGyCW3lOa" target="_blank">
+                <img src="/images/clay.jpg" alt="Watch Tutorial" style="width: 40%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+            </a>
+        </div>
+    }
+
+    @if (craft == "Basket Weaving")
+    {
+        <h4 style="text-align: center;">Materials Needed:</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="width: 30%; text-align: center;">
+                <p>Natural Fibers/Reeds</p>
+                <img src="/images/basketfibre.jpg" alt="Natural Fibers/Reeds" style="width: 100%; height: auto;" />
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <p>Scissors</p>
+                <img src="/images/scissor.jpg" alt="Scissors" style="width: 100%; height: auto;" />
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <p>Glue</p>
+                <img src="/images/glue.jpg" alt="Glue" style="width: 100%; height: auto;" />
+            </div>
+        </div>
+
+        <h4 style="text-align: center;">Tutorial Video:</h4>
+        <div style="text-align: center;">
+            <a href="https://youtu.be/fz4LC20wbdI?si=EV7i4Yy0KjhVVwGL" target="_blank">
+                <img src="/images/basket.jpg" alt="Watch Tutorial" style="width: 40%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+            </a>
+        </div>
+    }
+
+
+    @if (craft == "Teddy Bear Making")
+    {
+        <h4 style="text-align: center;">Materials Needed:</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="width: 30%; text-align: center;">
+                <p>Soft Fabric</p>
+                <img src="/images/softfabric.jpg" alt="Soft Fabric" style="width: 100%; height: auto;" />
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <p>Needle & Thread</p>
+                <img src="/images/needlesThread.jpg" alt="Needle & Thread" style="width: 100%; height: auto;" />
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <p>Stuffing Cotton</p>
+                <img src="/images/stuffCotton.jpg" alt="Stuffing Cotton" style="width: 100%; height: auto;" />
+            </div>
+        </div>
+
+        <h4 style="text-align: center;">Tutorial Video:</h4>
+        <div style="text-align: center;">
+            <a href="https://youtu.be/_VymVayMPVI?si=3Wa4jV5BKjVdd4Y9" target="_blank">
+                <img src="/images/teddy.jpg" alt="Watch Tutorial" style="width: 40%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+            </a>
+        </div>
+    }
+    <br />
+    <a href="javascript:void(0);" onclick="openPopup()" class="buy-btn">Buy Now</a>
+</div>
+
+<div class="popup-overlay" id="orderPopup">
+    <div class="popup">
+        <button class="close-btn" onclick="closePopup()">X</button>
+        <h3>Enter Your Details</h3>
+
+        <div class="error" id="errorMsg" style="color: red; display: none;"></div>
+
+        <label>Name</label>
+        <input type="text" id="custName" class="form-control" placeholder="Enter Name" required>
+
+        <label>Mobile No</label>
+        <input type="text" id="custMobile" class="form-control" placeholder="Enter 10-digit Mobile Number" required
+               maxlength="10" pattern="[0-9]{10}" oninput="validateMobile()">
+
+        <label>Address</label>
+        <textarea id="custAddress" class="form-control" placeholder="Enter Address" required></textarea>
+
+        <div class="btn-group mt-3">
+            <button class="btn btn-success" onclick="cashOnDelivery()">Cash on Delivery</button>
+            <button class="btn btn-warning" onclick="onlinePayment()">Online Payment</button>
+        </div>
+
+        <div id="qrSection" style="display:none; margin-top:15px; text-align:center;">
+            <p>Scan & Pay - Amount ₹<span id="displayPrice">@price</span></p>
+            <img src="~/images/qr.jpg" alt="QR Code" style="width:200px;">
+            <br><br>
+            <button class="btn btn-success" onclick="placeOrder('Paid')">Paid</button>
+            <button class="btn btn-danger" onclick="placeOrder('Not Paid')">Not Paid</button>
+        </div>
+
+        <div class="order-confirm mt-3" id="orderStatus"></div>
+    </div>
+</div>
+
+
+
+

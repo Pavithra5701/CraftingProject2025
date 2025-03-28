@@ -1,0 +1,139 @@
+﻿@using static AdminController
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var craftList = ViewBag.CraftList as List<CraftModel> ?? new List<CraftModel>(); // Avoid null error
+    var craftData = ViewBag.Data as Dictionary<int, List<CraftDetail>> ?? new Dictionary<int, List<CraftDetail>>();
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CraftingProject</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .stock {
+            font-size: 18px;
+            font-weight: bold;
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function showData() {
+            const craftId = document.getElementById('craftDropdown').value;
+            const tableBody = document.getElementById("ordersTableBody"); // Get tbody element
+
+            if (!craftId) {
+                tableBody.innerHTML = "<tr><td colspan='5'>No orders available</td></tr>";
+                return;
+            }
+
+            // Fetch order data from the backend
+            fetch(`/Admin/GetCraftOrders?craftId=${craftId}`)
+                .then(response => response.json())
+                .then(data => {
+                    let tableContent = "";
+
+                    if (data.length > 0) {
+                        data.forEach(order => {
+                            tableContent += `
+                                <tr>
+                                    <td>${order.name}</td>
+                                    <td>${order.mobileNum}</td>
+                                    <td>${order.address}</td>
+                                    <td>${order.payMode}</td>
+                                    <td>${order.orderDate}</td>
+                                </tr>`;
+                        });
+                    } else {
+                        tableContent = "<tr><td colspan='5'>No orders available</td></tr>";
+                    }
+
+                    tableBody.innerHTML = tableContent;
+                })
+                .catch(error => console.error("Error fetching orders:", error));
+        }
+    </script>
+
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav style="display: flex; justify-content: space-between; padding: 15px; background-color: #f8f9fa; border-bottom: 2px solid #ddd;">
+                <h2>Admin Dashboard</h2>
+               
+            </nav>
+        </header>
+        <br />
+        <label for="craftDropdown">Select Craft Category:</label>
+        <select id="craftDropdown" onchange="showData()">
+            <option value="">-- Select --</option>
+            @if (craftList != null && craftList.Any())
+            {
+                @foreach (var craft in craftList)
+                {
+                    <option value="@craft.Id">@craft.Name</option>
+                }
+            }
+            else
+            {
+                <option value="">No crafts available</option>
+            }
+        </select>
+
+        <table id="ordersTable" class="dataTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mobile Number</th>
+                    <th>Address</th>
+                    <th>Payment Mode</th>
+                    <th>Order Date</th>
+                </tr>
+            </thead>
+            <tbody id="ordersTableBody">
+                <tr><td colspan="5">No orders available</td></tr>
+            </tbody>
+        </table>
+
+
+
+    </div>
+</body>
+</html>

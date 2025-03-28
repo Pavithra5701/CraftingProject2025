@@ -1,0 +1,369 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CraftingProject.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CraftingProject.nz4qtyngfv.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images.zip",
+      "PackagePath": "staticwebassets\\images.zip"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\Polymerclay.jpg",
+      "PackagePath": "staticwebassets\\images\\Polymerclay.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\basket.jpg",
+      "PackagePath": "staticwebassets\\images\\basket.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\basketfibre.jpg",
+      "PackagePath": "staticwebassets\\images\\basketfibre.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\bottle.jpg",
+      "PackagePath": "staticwebassets\\images\\bottle.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\bottleEmp.jpg",
+      "PackagePath": "staticwebassets\\images\\bottleEmp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\brush.jpg",
+      "PackagePath": "staticwebassets\\images\\brush.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\clay.jpeg",
+      "PackagePath": "staticwebassets\\images\\clay.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\clayTools.jpg",
+      "PackagePath": "staticwebassets\\images\\clayTools.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\fibre.JPG",
+      "PackagePath": "staticwebassets\\images\\fibre.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\glue.jpg",
+      "PackagePath": "staticwebassets\\images\\glue.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\needlesThread.jpg",
+      "PackagePath": "staticwebassets\\images\\needlesThread.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\origamiPaper.jpg",
+      "PackagePath": "staticwebassets\\images\\origamiPaper.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\paint.jpg",
+      "PackagePath": "staticwebassets\\images\\paint.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\paper.jpg",
+      "PackagePath": "staticwebassets\\images\\paper.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\qr.jpg",
+      "PackagePath": "staticwebassets\\images\\qr.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\scissor.jpg",
+      "PackagePath": "staticwebassets\\images\\scissor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\softfabric.jpg",
+      "PackagePath": "staticwebassets\\images\\softfabric.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\stuffCotton.jpg",
+      "PackagePath": "staticwebassets\\images\\stuffCotton.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\teddy.jpg",
+      "PackagePath": "staticwebassets\\images\\teddy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\images\\yarnFibre.jpg",
+      "PackagePath": "staticwebassets\\images\\yarnFibre.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\uploads\\36ae44ad-92a4-4ef5-a7dd-b7a5e43a616f_Screenshot 2024-08-22 170228.png",
+      "PackagePath": "staticwebassets\\uploads\\36ae44ad-92a4-4ef5-a7dd-b7a5e43a616f_Screenshot 2024-08-22 170228.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\uploads\\807c50f0-390e-47cf-87d2-6239654d4bd1_Screenshot 2024-08-22 170228.png",
+      "PackagePath": "staticwebassets\\uploads\\807c50f0-390e-47cf-87d2-6239654d4bd1_Screenshot 2024-08-22 170228.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\uploads\\a3989ec6-ce3d-4e90-9ade-6f6464c7d106_Screenshot 2024-10-29 225907.png",
+      "PackagePath": "staticwebassets\\uploads\\a3989ec6-ce3d-4e90-9ade-6f6464c7d106_Screenshot 2024-10-29 225907.png"
+    },
+    {
+      "Id": "C:\\Users\\Mohammed Zaman\\Desktop\\Project_MVC\\CraftingProject\\wwwroot\\uploads\\dc049d24-71e9-4bb9-a140-a6027cb775d7_Screenshot 2024-10-24 122448.png",
+      "PackagePath": "staticwebassets\\uploads\\dc049d24-71e9-4bb9-a140-a6027cb775d7_Screenshot 2024-10-24 122448.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CraftingProject.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CraftingProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CraftingProject.props",
+      "PackagePath": "build\\CraftingProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CraftingProject.props",
+      "PackagePath": "buildMultiTargeting\\CraftingProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CraftingProject.props",
+      "PackagePath": "buildTransitive\\CraftingProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
